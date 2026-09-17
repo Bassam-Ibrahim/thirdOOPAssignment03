@@ -1,21 +1,30 @@
-﻿namespace ThirdOOPAssignment
+﻿using ThirdOOPAssignment;
+
+namespace ThirdOOPAssignment
 {
-    public class Driver
+    public sealed class CompletedShipment : Shipment
     {
-        public int DriverId { get; set; }
-
-        public string FullName { get; set; }
-
-        public string PhoneNumber { get; set; }
-
-        public Driver(
-            int driverId,
-            string fullName,
-            string phoneNumber)
+        public CompletedShipment(
+            string trackingCode,
+            string description,
+            decimal weight,
+            decimal deliveryFee,
+            DeliveryAddress destination)
+            : base(
+                trackingCode,
+                description,
+                weight,
+                deliveryFee,
+                destination)
         {
-            DriverId = driverId;
-            FullName = fullName;
-            PhoneNumber = phoneNumber;
+        }
+
+        public override void PrintShipment()
+        {
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("Completed Shipment");
+
+            base.PrintShipment();
         }
     }
 }
