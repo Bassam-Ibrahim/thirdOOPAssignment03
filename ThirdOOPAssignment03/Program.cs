@@ -1,4 +1,6 @@
-﻿class program {
+﻿using ThirdOOPAssignment;
+
+class program {
 
     public static void Main(string[] args)
     {
@@ -17,6 +19,7 @@
         #endregion
 
 
-
-    }
+        }
+ 
+    
 }
